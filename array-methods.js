@@ -5,7 +5,26 @@ const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uran
     to a section element in your HTML with an id of "planets".
     Use string templates to construct the DOM elements.
 */
-const planetEl = document.getElementById("planets")
+const solarSystem = document.getElementById("planets");
+
+
+
+planets.forEach( function(planet){
+    //check to see if foreach function is connected to array
+    console.log('test planet:', planet);
+    //output to DOM element id planets
+   let planetContainer = "";
+    //use string templates to construct the DOM elements
+    planetContainer += `<p>` + planet + `</p>`;
+    //check planetContainer contents forEach round
+    console.log('test planetContainer', planetContainer);
+
+    solarSystem.innerHTML += planetContainer;
+
+
+})
+
+// const planetEl = document.getElementById("planets")
 
 /*
     Use the map method to create a new array where the 
@@ -26,4 +45,4 @@ const planetEl = document.getElementById("planets")
 
 
 // Use the reduce method to create a sentence from the words in the following array
-const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
+// const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
